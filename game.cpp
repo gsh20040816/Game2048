@@ -15,12 +15,14 @@ using namespace std;
 #define LEFT 2
 #define RIGHT 3
 #define KEY_ESC 27
-#define WIN_VALUE 1024
+#define WIN_VALUE 2048
 const int dx[4] = { -1,1,0,0 };
 const int dy[4] = { 0,0,-1,1 };
+int queryed;
 
 void playGame()
 {
+	queryed = false;
 	int board[4][4] = {};
 	int score = 0, step = 0;
 	char choice = '\0';
@@ -70,6 +72,7 @@ void playGame()
 			printExit();
 			return;
 		}
+		printInterface(board, score, step);
 	}
 }
 
@@ -90,7 +93,6 @@ bool isGameOver(int board[4][4])
 {
 	if (findMax(board) >= WIN_VALUE)
 	{
-		static bool queryed = false;
 		if (!queryed)
 		{
 			queryed = true;
