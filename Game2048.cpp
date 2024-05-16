@@ -2,6 +2,6 @@
 
 int main()
 {
-	displayMainWindow();
+	printMainWindow();
 	return 0;
 }
