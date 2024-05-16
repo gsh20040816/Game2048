@@ -2,8 +2,7 @@
 #include<Windows.h>
 #include<conio.h>
 #include"Game2048.h"
-using std::cout;
-using std::endl;
+using namespace std;
 
 void printMainWindow()
 {
