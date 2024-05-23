@@ -49,9 +49,6 @@ void playGame()
 			case ARROW_RIGHT:
 				moveBoard(board, score, step, RIGHT);
 				break;
-			default:
-				cout << "\n输入错误，请重新输入" << endl;
-				waitEnter();
 			}
 		}
 		else if (choice == KEY_ESC)
@@ -59,11 +56,6 @@ void playGame()
 			gameOver(board, score, step, "您选择了退出游戏！");
 			printExit();
 			return;
-		}
-		else
-		{
-			cout << "\n输入错误，请重新输入" << endl;
-			waitEnter();
 		}
 		printInterface(board, score, step);
 		if (isGameOver(board))
